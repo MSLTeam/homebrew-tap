@@ -8,12 +8,12 @@ class MslxDaemon < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/MSLTeam/MSLX/releases/download/v1.5.10/MSLX-Daemon_v1.5.10_osx-arm64.tar.gz"
-    sha256 "f9bb9616e12155e980eaf31fe2ea368855cd342a60e8abc87b262d307be2b3e8"
+    sha256 "a27d06dbc8de6058b3e3151deedc8cab2499be2b50b7fcae1ca68ee750fed52d"
   end
 
   if Hardware::CPU.intel?
     url "https://github.com/MSLTeam/MSLX/releases/download/v1.5.10/MSLX-Daemon_v1.5.10_osx-x64.tar.gz"
-    sha256 "706b186bcc391b321fac580653233cc9b94c50b8bd683229a4c8992f7e0380e4"
+    sha256 "9feb4c6524f26b4ccc6a0aea7503c011b0d362868e90b4203431076482d9fba1"
   end
 
   livecheck do
