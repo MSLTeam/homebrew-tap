@@ -21,7 +21,7 @@ class MslxDaemon < Formula
     strategy :github_latest
   end
 
-  depends_on "dotnet"
+  depends_on "dotnet@10"
   depends_on :macos
 
   def install
@@ -31,8 +31,8 @@ class MslxDaemon < Formula
       #!/bin/bash
       export PATH="/usr/local/bin:$PATH"
       export PATH="/opt/homebrew/bin:$PATH"
-      export DOTNET_ROOT="$(brew --prefix dotnet)/libexec"
-      export PATH="$(brew --prefix dotnet)/libexec:$PATH"
+      export DOTNET_ROOT="$(brew --prefix dotnet@10)/libexec"
+      export PATH="$(brew --prefix dotnet@10)/libexec:$PATH"
       DATA_DIR="$HOME/Library/Application Support/MSLX/MSLXData"
       DAEMON_DATA="$DATA_DIR/DaemonData"
       DATA_LINK="#{libexec}/DaemonData"
@@ -47,8 +47,8 @@ class MslxDaemon < Formula
       ln -sfn "$DAEMON_DATA" "$DATA_LINK"
 
       cd "#{libexec}"
-      if ! command -v $(brew --prefix dotnet)/libexec/dotnet &> /dev/null; then
-        echo "错误：.NET 运行时未正确安装，请运行 'brew install dotnet'" >&2
+      if ! command -v "$(brew --prefix dotnet@10)/libexec/dotnet" &> /dev/null; then
+        echo "错误：.NET 10 运行时未正确安装，请运行 'brew install dotnet@10'" >&2
         exit 1
       fi
       if [ ! -f "$INIT_LOG" ]; then
