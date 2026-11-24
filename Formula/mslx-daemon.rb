@@ -2,18 +2,18 @@ class MslxDaemon < Formula
   desc "Cross-platform Minecraft Server Manager"
   homepage "https://mslx.mslmc.cn/"
 
-  version "1.8.0"
+  version "1.8.0.1"
 
   license "AGPL-3.0"
 
   if Hardware::CPU.arm?
-    url "https://github.com/MSLTeam/MSLX/releases/download/v1.8.0/MSLX-Daemon_v1.8.0_osx-arm64.tar.gz"
-    sha256 "05439100a031bf142c703ad1aabff5e98fade89e95402062a1b3562c71270ff0"
+    url "https://github.com/MSLTeam/MSLX/releases/download/v1.8.0.1/MSLX-Daemon_v1.8.0.1_osx-arm64.tar.gz"
+    sha256 "2f51d8ad1a6536240a1cdc00fd3d2578b14ce8f07112285fe6df2ea216706329"
   end
 
   if Hardware::CPU.intel?
-    url "https://github.com/MSLTeam/MSLX/releases/download/v1.8.0/MSLX-Daemon_v1.8.0_osx-x64.tar.gz"
-    sha256 "5cba82cba79371a091b18cac432aa8a36a044e08c3928389a7eb717e7fe961e4"
+    url "https://github.com/MSLTeam/MSLX/releases/download/v1.8.0.1/MSLX-Daemon_v1.8.0.1_osx-x64.tar.gz"
+    sha256 "30adc4e602d6de75fd2b28438e5515416497fc5bdaa33703b58442d9de610d40"
   end
 
   livecheck do
